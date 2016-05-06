@@ -10,7 +10,7 @@ HEADERS  += \
     include/log4cpp/CategoryStream.hh \
     include/log4cpp/Configurator.hh \
     include/log4cpp/convenience.h \
-    include/log4cpp/FileAppender.h \
+    include/log4cpp/FileAppender.hh \
     include/log4cpp/Layout.hh \
     include/log4cpp/LayoutAppender.hh \
     include/log4cpp/PatternLayout.hh \
