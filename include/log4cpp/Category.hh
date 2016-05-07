@@ -5,6 +5,7 @@
 #include "log4cpp/CategoryStream.hh"
 #include "log4cpp/convenience.h"
 #include "log4cpp/Priority.hh"
+#include <sstream>
 
 namespace log4cpp
 {

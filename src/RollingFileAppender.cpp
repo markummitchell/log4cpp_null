@@ -3,12 +3,19 @@
 namespace log4cpp {
 
   RollingFileAppender::RollingFileAppender (const std::string &name,
-                                            const std::string &,
-                                            size_t,
-                                            unsigned int,
-                                            bool,
-                                            mode_t) :
-     FileAppender (name)
+                                            const std::string &fileName,
+                                            size_t maxFileSize,
+                                            unsigned int maxBackupIndex,
+                                            bool append) :
+    FileAppender (name),
+    m_fileName (fileName),
+    m_maxFileSize (maxFileSize),
+    m_maxBackupIndex (maxBackupIndex),
+    m_append (append)
+  {
+  }
+
+  RollingFileAppender::~RollingFileAppender ()
   {
   }
 
@@ -16,18 +23,28 @@ namespace log4cpp {
   {
   }
 
-  unsigned int RollingFileAppender::getMaxBackupIndex() const
+  bool RollingFileAppender::getAppend () const
   {
-    return 1;
+    return m_append;
   }
 
-  void RollingFileAppender::setMaximumFileSize(size_t)
+  unsigned int RollingFileAppender::getMaxBackupIndex() const
   {
+    return m_maxBackupIndex;
+  }
+
+  void RollingFileAppender::setMaximumFileSize(size_t maxFileSize)
+  {
+    m_maxFileSize = maxFileSize;
   }
 
   size_t RollingFileAppender::getMaxFileSize() const
   {
-    return 1;
+    return m_maxFileSize;
+  }
+
+  void RollingFileAppender::setLayout (Layout *)
+  {
   }
 }
 

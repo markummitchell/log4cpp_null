@@ -6,4 +6,8 @@ namespace log4cpp {
     LayoutAppender (name)
   {
   }
+
+  FileAppender::~FileAppender ()
+  {
+  }
 }

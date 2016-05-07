@@ -2,6 +2,10 @@
 
 namespace log4cpp {
 
+  Layout::Layout()
+  {
+  }
+
   Layout::~Layout()
   {
   }

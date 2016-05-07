@@ -1,8 +1,6 @@
 #ifndef CONVENIENCE_H
 #define CONVENIENCE_H
 
-#include <sstream>
-
 #define LOG4CPP_EMERG_S(logger) \
   if (false) logger.nullStream()
 #define LOG4CPP_FATAL_S(logger) \

@@ -3,6 +3,9 @@
 OBJECTS_DIR = src/.objs
 MOC_DIR = src/.moc
 RCC_DIR = src/.rcc
+QT =
+
+#QMAKE_CXXFLAGS += -stdlib=libc++
 
 HEADERS  += \
     include/log4cpp/Appender.hh \
@@ -13,6 +16,7 @@ HEADERS  += \
     include/log4cpp/FileAppender.hh \
     include/log4cpp/Layout.hh \
     include/log4cpp/LayoutAppender.hh \
+    include/log4cpp/LoggingEvent.hh \
     include/log4cpp/PatternLayout.hh \
     include/log4cpp/Priority.hh \
     include/log4cpp/PropertyConfigurator.hh \
@@ -26,6 +30,7 @@ SOURCES += \
     src/FileAppender.cpp \
     src/Layout.cpp \
     src/LayoutAppender.cpp \
+    src/LoggingEvent.cpp \
     src/PatternLayout.cpp \
     src/PropertyConfigurator.cpp \
     src/RollingFileAppender.cpp

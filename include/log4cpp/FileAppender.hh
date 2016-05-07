@@ -10,6 +10,7 @@ namespace log4cpp {
   {
   public:
     FileAppender(const std::string &name);
+    virtual ~FileAppender();
   };
 }
 

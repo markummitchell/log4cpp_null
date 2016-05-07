@@ -1,8 +1,6 @@
 #ifndef PRIORITY_HH
 #define PRIORITY_HH
 
-#include <string>
-
 namespace log4cpp {
 
   /// This class provides importance levels for categorizing log messages
@@ -22,9 +20,7 @@ namespace log4cpp {
     } PriorityLevel;
 
     typedef int Value;
-
-    static Value getPriorityValue (const std::string& priorityName);
-  };
+  };  
 }
 
 #endif // PRIORITY_HH

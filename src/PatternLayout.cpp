@@ -1,17 +1,31 @@
+#include "log4cpp/LoggingEvent.hh"
 #include "log4cpp/PatternLayout.hh"
 
-namespace log4cpp {
+using namespace log4cpp;
+using namespace std;
 
-  PatternLayout::PatternLayout()
-  {
-  }
-
-  PatternLayout::~PatternLayout()
-  {
-  }
-
-  void PatternLayout::setConversionPattern (const std::string &) throw (ConfigureFailure)
-  {
-  }
+PatternLayout::PatternLayout() :
+  Layout()
+{
 }
+
+PatternLayout::~PatternLayout()
+{
+}
+
+string PatternLayout::format(const LoggingEvent &)
+{
+  string empty;
+  return empty;
+}
+
+void PatternLayout::setConversionPattern (const std::string &conversionPattern) throw (ConfigureFailure)
+{
+  if (conversionPattern == "") {
+    throw ConfigureFailure("Empty reason");
+  }
+
+  m_conversionPattern = conversionPattern;
+}
+
 
