@@ -5,7 +5,10 @@ MOC_DIR = src/.moc
 RCC_DIR = src/.rcc
 QT =
 
-#QMAKE_CXXFLAGS += -stdlib=libc++
+macx-* {
+QMAKE_CXXFLAGS += -stdlib=libc++
+QMAKE_LFLAGS += -stdlib=libc++
+}
 
 HEADERS  += \
     include/log4cpp/Appender.hh \
