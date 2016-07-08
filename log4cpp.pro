@@ -10,6 +10,10 @@ QMAKE_CXXFLAGS += -stdlib=libc++
 QMAKE_LFLAGS += -stdlib=libc++
 }
 
+win32-* {
+CONFIG += staticlib
+}
+
 HEADERS  += \
     include/log4cpp/Appender.hh \
     include/log4cpp/Category.hh \
