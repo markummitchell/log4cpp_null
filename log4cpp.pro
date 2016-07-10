@@ -1,5 +1,6 @@
 # log4cpp.pro : Builds make files for a noop version of log4cpp called log4cpp_null
 
+CONFIG += staticlib
 OBJECTS_DIR = src/.objs
 MOC_DIR = src/.moc
 RCC_DIR = src/.rcc
