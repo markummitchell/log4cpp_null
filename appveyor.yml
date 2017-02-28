@@ -17,7 +17,8 @@ build_script:
 after_build:
   - cd %APPVEYOR_BUILD_FOLDER%
   - mkdir %RESULTDIR%
-  - xcopy include %RESULTDIR% /S /E
+  - mkdir %RESULTDIR%\include
+  - xcopy include %RESULTDIR%\include /S /E
   - xcopy release\lib\log4cpp.lib %RESULTDIR%
   - 7z a %RESULTDIR%.7z %RESULTDIR%
 
