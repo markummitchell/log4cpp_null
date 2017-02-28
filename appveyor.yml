@@ -20,4 +20,4 @@ after_build:
 
 artifacts:
   - path: log4cpp-build*.7z
-  - name: log4cpp-build-result
+    name: log4cpp-build-result
