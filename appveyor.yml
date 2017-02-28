@@ -11,7 +11,7 @@ install:
 
 build_script:
   - cd %APPVEYOR_BUILD_FOLDER%
-  - qmake engauge.pro
+  - qmake log4cpp.pro
   - nmake
     
 after_build:
