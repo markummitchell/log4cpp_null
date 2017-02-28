@@ -1,0 +1,23 @@
+init:
+ - C:\"Program Files (x86)"\"Microsoft Visual Studio 14.0"\VC\vcvarsall.bat x86
+
+environment:
+  matrix:
+    - RESULTDIR: log4cpp-build
+    - RESULTDIR: log4cpp-build-debug
+    
+build_script:
+  - cd %APPVEYOR_BUILD_FOLDER%
+  - qmake engauge.pro
+  - nmake
+    
+after_build:
+  - cd %APPVEYOR_BUILD_FOLDER%
+  - mkdir %RESULTDIR%
+  - xcopy include %RESULTDIR% /S /E
+  - xcopy src/log4cpp.lib %RESULTDIR%
+  - 7z a %RESULTDIR%.7z %RESULTDIR%
+
+artifacts:
+  - path: log4cpp-build*.7z
+  - name: log4cpp-build-result
