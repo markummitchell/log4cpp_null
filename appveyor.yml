@@ -18,8 +18,9 @@ after_build:
   - cd %APPVEYOR_BUILD_FOLDER%
   - mkdir %RESULTDIR%
   - mkdir %RESULTDIR%\include
+  - mkdir %RESULTDIR%\lib
   - xcopy include %RESULTDIR%\include /S /E
-  - xcopy release\lib\log4cpp.lib %RESULTDIR%
+  - xcopy release\lib\log4cpp.lib %RESULTDIR%\lib
   - 7z a %RESULTDIR%.7z %RESULTDIR%
 
 artifacts:
