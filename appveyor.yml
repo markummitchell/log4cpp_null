@@ -4,10 +4,9 @@ init:
 environment:
   matrix:
     - RESULTDIR: log4cpp-build
-      LIBFILE: 'release\lib\log4cpp.lib'
+      LOG4CPP_CONFIG: "release"
     - RESULTDIR: log4cpp-build-debug
       LOG4CPP_CONFIG: "debug"
-      LIBFILE: 'debug\lib\log4cpp.lib'
 
 install:
   - set QTDIR=C:\Qt\5.8\msvc2015
@@ -24,7 +23,7 @@ after_build:
   - mkdir %RESULTDIR%\include
   - mkdir %RESULTDIR%\lib
   - xcopy include %RESULTDIR%\include /S /E
-  - xcopy %LIBFILE% %RESULTDIR%\lib
+  - xcopy %LOG4CPP_CONFIG%\lib\log4cpp.* %RESULTDIR%\lib
   - 7z a %RESULTDIR%.7z %RESULTDIR%
 
 artifacts:
