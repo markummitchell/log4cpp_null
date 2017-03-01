@@ -5,13 +5,15 @@ environment:
   matrix:
     - RESULTDIR: log4cpp-build
     - RESULTDIR: log4cpp-build-debug
+      LOG4CPP_CONFIG: "debug"
+
 install:
   - set QTDIR=C:\Qt\5.8\msvc2015
   - set PATH=%PATH%;%QTDIR%\bin
 
 build_script:
   - cd %APPVEYOR_BUILD_FOLDER%
-  - qmake log4cpp.pro
+  - qmake log4cpp.pro "CONFIG+=%LOG4CPP_CONFIG%"
   - nmake
     
 after_build:
