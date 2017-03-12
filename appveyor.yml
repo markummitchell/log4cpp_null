@@ -14,7 +14,7 @@ install:
 
 build_script:
   - cd %APPVEYOR_BUILD_FOLDER%
-  - qmake log4cpp.pro "CONFIG+=%LOG4CPP_CONFIG%"
+  - qmake log4cpp.pro "CONFIG+=%LOG4CPP_CONFIG% staticlib"
   - nmake
     
 after_build:
