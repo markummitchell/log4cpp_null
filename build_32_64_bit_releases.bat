@@ -48,4 +48,4 @@ copy debug\lib\log4cpp.* lib64d
 rem *****************************
 rem * Both 32 and 64 bit builds *
 rem *****************************
-7z a log4cpp.zip lib32 lib64
+7z a log4cpp.zip lib32 lib64 include
