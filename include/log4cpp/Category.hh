@@ -14,6 +14,7 @@ namespace log4cpp
   class Category
   {
   public:
+    Category();
     virtual ~Category();
 
     void addAppender (Appender *appender);

@@ -19,7 +19,7 @@ namespace log4cpp {
     CategoryStream(Category &category,
                    Priority::Value priority);
 
-    ~CategoryStream();
+    virtual ~CategoryStream();
 
     /// Return useless value
     inline Category &getCategory() const { return m_category; }
