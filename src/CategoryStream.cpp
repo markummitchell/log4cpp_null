@@ -8,6 +8,10 @@ namespace log4cpp {
     m_category (category)
   {
   }
+
+  CategoryStream::~CategoryStream()
+  {
+  }
 }
 
 
