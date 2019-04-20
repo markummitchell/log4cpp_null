@@ -9,7 +9,7 @@ environment:
       LOG4CPP_CONFIG: "debug"
 
 install:
-  - set QTDIR=C:\Qt\5.8\msvc2015
+  - set QTDIR=C:\Qt\5.10\msvc2015
   - set PATH=%PATH%;%QTDIR%\bin
 
 build_script:

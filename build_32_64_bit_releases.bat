@@ -12,7 +12,7 @@ nmake
 qmake log4cpp.pro CONFIG+="release staticlib"
 nmake clean
 nmake
-copy release\lib\log4cpp.* lib32
+copy release\lib\log4cpp.* lib32\lib
 
 qmake log4cpp.pro CONFIG+="debug dll"
 nmake clean
@@ -20,7 +20,7 @@ nmake
 qmake log4cpp.pro CONFIG+="debug staticlib"
 nmake clean
 nmake
-copy debug\lib\log4cpp.* lib32d
+copy debug\lib\log4cpp.* lib32d\lib
 
 rem ****************
 rem * 64 bit build *
@@ -35,17 +35,16 @@ nmake clean
 nmake
 qmake log4cpp.pro CONFIG+="release staticlib"
 nmake
-copy release\lib\log4cpp.* lib64
+copy release\lib\log4cpp.* lib64\lib
 
 qmake log4cpp.pro CONFIG+="debug dll"
 nmake clean
 nmake
 qmake log4cpp.pro CONFIG+="debug staticlib"
-nmake clean
 nmake
-copy debug\lib\log4cpp.* lib64d
+copy debug\lib\log4cpp.* lib64d\lib
 
 rem *****************************
 rem * Both 32 and 64 bit builds *
 rem *****************************
-7z a log4cpp.zip lib32 lib64 include
+7z a log4cpp_null_build.zip lib32 lib64

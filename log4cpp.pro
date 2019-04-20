@@ -3,6 +3,7 @@
 OBJECTS_DIR = src/.objs
 MOC_DIR = src/.moc
 RCC_DIR = src/.rcc
+VERSION = 5 # To get liblog4cpp.so.5 for consistency with standard log4cpp
 QT =
 
 macx-* {
