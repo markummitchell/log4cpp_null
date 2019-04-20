@@ -17,7 +17,7 @@ namespace log4cpp {
     virtual ~PatternLayout ();
 
     virtual std::string format(const LoggingEvent &event);
-    virtual void setConversionPattern (const std::string &conversionPattern) throw (ConfigureFailure);
+    virtual void setConversionPattern (const std::string &conversionPattern);
 
   private:
     std::string m_conversionPattern;

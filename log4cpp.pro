@@ -8,7 +8,11 @@ QT =
 macx-* {
 QMAKE_CXXFLAGS += -stdlib=libc++
 QMAKE_LFLAGS += -stdlib=libc++
+CONFIG += lib_bundle
 }
+
+TEMPLATE = lib
+TARGET = lib/log4cpp
 
 HEADERS  += \
     include/log4cpp/Appender.hh \
@@ -37,8 +41,5 @@ SOURCES += \
     src/PatternLayout.cpp \
     src/PropertyConfigurator.cpp \
     src/RollingFileAppender.cpp
-
-TEMPLATE = lib
-TARGET = lib/log4cpp
 
 INCLUDEPATH += include
